@@ -1,0 +1,13 @@
+category: Text
+requires: cygwin glib2-runtime libaspell15 zlib
+sdesc: "Interface to various spell checking libraries"
+ldesc: "The project aims to provide an efficient extensible abstraction for
+dealing with different spell checking libraries.
+
+Enchant is meant to provide a generic interface into various existing
+spell checking libaries. These include, but are not limited to:
+    * Aspell/Pspell
+    * Ispell
+    * Hspell
+    * Uspell
+"
