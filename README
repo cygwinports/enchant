@@ -11,24 +11,26 @@ spell checking libaries. These include, but are not limited to:
 	* Uspell
 
 Runtime requirements:
-  cygwin-1.5.18-1
-  glib2-runtime-2.6.6-1
+  cygwin-1.5.24-2
+  glib2-2.12.12-2
   libaspell15-0.50.3-1
-  zlib-1.2.3-1
+  libhspell1-1.0-2
+  libuspell-1.1.1-1
+  zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.18-1
-  autoconf2.5-2.59-3
-  automake1.9-1.9.6-1
-  binutils-20050610-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
-  hspell-0.9-1
-  libtool1.5-1.5.20-1
-  make-3.80-1
-  pkgconfig-0.17.2-2
-  sed-4.1.4-1
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  cygport-0.3.5-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
 
 Canonical homepage:
   http://www.abisource.com/enchant/
@@ -43,42 +45,36 @@ Build instructions:
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  ./enchant-1.2.0-X.sh all
+  cygport ./enchant-1.2.0-X.cygport all
 
 This will create:
   /usr/src/enchant-1.2.0-X-src.tar.bz2
   /usr/src/enchant-1.2.0-X.tar.bz2
+  /usr/src/enchant-devel-1.2.0-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
+Files included in the binary packages:
 
+(enchant)
   /usr/bin/cygenchant-1.dll
   /usr/bin/enchant-lsmod.exe
   /usr/bin/enchant.exe
-  /usr/include/enchant/enchant++.h
-  /usr/include/enchant/enchant-provider.h
-  /usr/include/enchant/enchant.h
   /usr/lib/enchant/cygenchant_aspell.dll
   /usr/lib/enchant/cygenchant_hspell.dll
   /usr/lib/enchant/cygenchant_ispell.dll
   /usr/lib/enchant/cygenchant_myspell.dll
-  /usr/lib/enchant/libenchant_aspell.dll.a
+  /usr/lib/enchant/cygenchant_uspell.dll
   /usr/lib/enchant/libenchant_aspell.la
-  /usr/lib/enchant/libenchant_hspell.dll.a
   /usr/lib/enchant/libenchant_hspell.la
-  /usr/lib/enchant/libenchant_ispell.dll.a
   /usr/lib/enchant/libenchant_ispell.la
-  /usr/lib/enchant/libenchant_myspell.dll.a
   /usr/lib/enchant/libenchant_myspell.la
-  /usr/lib/libenchant.dll.a
-  /usr/lib/libenchant.la
-  /usr/lib/pkgconfig/enchant.pc
+  /usr/lib/enchant/libenchant_uspell.la
   /usr/share/doc/Cygwin/enchant-1.2.0.README
   /usr/share/doc/enchant-1.2.0/AUTHORS
   /usr/share/doc/enchant-1.2.0/BUGS
-  /usr/share/doc/enchant-1.2.0/ChangeLog
   /usr/share/doc/enchant-1.2.0/COPYING.LIB
+  /usr/share/doc/enchant-1.2.0/ChangeLog
   /usr/share/doc/enchant-1.2.0/HACKING
   /usr/share/doc/enchant-1.2.0/INSTALL
   /usr/share/doc/enchant-1.2.0/MAINTAINERS
@@ -88,9 +84,20 @@ Files included in the binary package:
   /usr/share/enchant/enchant.ordering
   /usr/share/man/man1/enchant.1.gz
 
+(enchant-devel)
+  /usr/include/enchant/enchant++.h
+  /usr/include/enchant/enchant-provider.h
+  /usr/include/enchant/enchant.h
+  /usr/lib/libenchant.dll.a
+  /usr/lib/libenchant.la
+  /usr/lib/pkgconfig/enchant.pc
+
 ------------------
 
 Port Notes:
+
+----- version 1.3.0-1 -----
+Version bump; added uspell support.
 
 ----- version 1.2.0-1 -----
 Version bump.

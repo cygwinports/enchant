@@ -1,6 +1,7 @@
 category: Text
-requires: cygwin glib2 libaspell15 libhspell1 libuspell zlib
-sdesc: "Interface to various spell checking libraries (runtime)"
+requires: cygwin glib2-devel
+external-source: enchant
+sdesc: "Interface to various spell checking libraries (development)"
 ldesc: "The project aims to provide an efficient extensible abstraction for
 dealing with different spell checking libraries.
 
