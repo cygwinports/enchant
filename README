@@ -1,33 +1,31 @@
 enchant
 -------------------------------------------
-The project aims to provide an efficient extensible abstraction for
-dealing with different spell checking libraries.
-
-Enchant is meant to provide a generic interface into various existing
-spell checking libaries. These include, but are not limited to:
-	* Aspell/Pspell
-	* Ispell
-	* Hspell
-	* Uspell
+The project aims to provide an efficient extensible abstraction for 
+dealing with different spell checking libraries. Enchant is meant to 
+provide a generic interface into various existing spell checking 
+libraries.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  glib2-2.12.12-2
-  libaspell15-0.50.3-1
+  cygwin-1.5.25-11
+  glib2-2.14.6-1
+  libaspell15-0.60.5-1
+  libdbus-glib_1_2-0.74-1
   libhspell1-1.0-2
+  libhunspell12-1.2.2-1
   libuspell-1.1.1-1
+  libvoikko1-1.6-1
   zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.3.5-1
-  gawk-3.1.5-4
+  cygport-0.3.9-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
-  libtool1.5-1.5.23a-2
+  gcc-g++-3.4.4-3
+  libtool-2.2.2-2
   make-3.81-1
   pkg-config-0.21-1
   sed-4.1.5-2
@@ -41,16 +39,16 @@ Canonical download:
 ----------------------------------------
 
 Build instructions:
-  unpack enchant-1.2.0-X-src.tar.bz2
+  unpack enchant-1.4.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./enchant-1.2.0-X.cygport all
+  cygport ./enchant-1.4.1-X.cygport all
 
 This will create:
-  /usr/src/enchant-1.2.0-X-src.tar.bz2
-  /usr/src/enchant-1.2.0-X.tar.bz2
-  /usr/src/enchant-devel-1.2.0-X.tar.bz2
+  /usr/src/enchant-1.4.1-X-src.tar.bz2
+  /usr/src/enchant-1.4.1-X.tar.bz2
+  /usr/src/enchant-devel-1.4.1-X.tar.bz2
 
 -------------------------------------------
 
@@ -65,22 +63,24 @@ Files included in the binary packages:
   /usr/lib/enchant/cygenchant_ispell.dll
   /usr/lib/enchant/cygenchant_myspell.dll
   /usr/lib/enchant/cygenchant_uspell.dll
+  /usr/lib/enchant/cygenchant_voikko.dll
+  /usr/lib/enchant/cygenchant_zemberek.dll
   /usr/lib/enchant/libenchant_aspell.la
   /usr/lib/enchant/libenchant_hspell.la
   /usr/lib/enchant/libenchant_ispell.la
   /usr/lib/enchant/libenchant_myspell.la
   /usr/lib/enchant/libenchant_uspell.la
-  /usr/share/doc/Cygwin/enchant-1.2.0.README
-  /usr/share/doc/enchant-1.2.0/AUTHORS
-  /usr/share/doc/enchant-1.2.0/BUGS
-  /usr/share/doc/enchant-1.2.0/COPYING.LIB
-  /usr/share/doc/enchant-1.2.0/ChangeLog
-  /usr/share/doc/enchant-1.2.0/HACKING
-  /usr/share/doc/enchant-1.2.0/INSTALL
-  /usr/share/doc/enchant-1.2.0/MAINTAINERS
-  /usr/share/doc/enchant-1.2.0/NEWS
-  /usr/share/doc/enchant-1.2.0/README
-  /usr/share/doc/enchant-1.2.0/TODO
+  /usr/lib/enchant/libenchant_voikko.la
+  /usr/lib/enchant/libenchant_zemberek.la
+  /usr/share/doc/enchant-1.4.1/AUTHORS
+  /usr/share/doc/enchant-1.4.1/BUGS
+  /usr/share/doc/enchant-1.4.1/COPYING.LIB
+  /usr/share/doc/enchant-1.4.1/ChangeLog
+  /usr/share/doc/enchant-1.4.1/HACKING
+  /usr/share/doc/enchant-1.4.1/MAINTAINERS
+  /usr/share/doc/enchant-1.4.1/NEWS
+  /usr/share/doc/enchant-1.4.1/README
+  /usr/share/doc/enchant-1.4.1/TODO
   /usr/share/enchant/enchant.ordering
   /usr/share/man/man1/enchant.1.gz
 
@@ -95,6 +95,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.4.1-1 -----
+Version bump; added voikko and zemberek support.
 
 ----- version 1.3.0-1 -----
 Version bump; added uspell support.
