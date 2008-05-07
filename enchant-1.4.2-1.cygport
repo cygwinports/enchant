@@ -1,0 +1,14 @@
+DESCRIPTION="Spell checking library with multiple backends"
+HOMEPAGE="http://www.abisource.com/projects/enchant/"
+SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/${P}.tar.gz"
+
+PKG_NAMES="${PN} ${PN}-devel"
+PKG_HINTS="setup devel"
+PKG_CONTENTS[0]="usr/bin/ usr/lib/${PN}/ usr/share/"
+PKG_CONTENTS[1]="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+
+CYGCONF_ARGS="
+	--disable-static
+	--with-aspell-prefix=/usr
+	--with-uspell-dir=/usr/share/uspell
+"
