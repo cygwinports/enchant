@@ -6,28 +6,26 @@ provide a generic interface into various existing spell checking
 libraries.
 
 Runtime requirements:
-  cygwin-1.5.25-11
-  glib2-2.14.6-1
+  cygwin-1.5.25-15
+  glib2-2.16.6-1
   libaspell15-0.60.5-1
-  libdbus-glib_1_2-0.74-1
   libhspell1-1.0-2
-  libhunspell12-1.2.2-1
-  libuspell-1.1.1-1
+  libhunspell12-1.2.7-1
+  libuspell1-1.1.1-2
   libvoikko1-1.6-1
-  zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
-  binutils-20060817-1
-  cygport-0.3.9-1
+  autoconf2.5-2.63-1
+  automake1.9-1.9.6-3
+  binutils-20080624-2
+  cygport-0.4.2-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
-  libtool-2.2.2-2
+  libtool-2.2.6a-1
   make-3.81-1
-  pkg-config-0.21-1
+  pkg-config-0.23a-2
   sed-4.1.5-2
 
 Canonical homepage:
@@ -48,30 +46,16 @@ Build instructions:
 This will create:
   /usr/src/enchant-1.4.2-X-src.tar.bz2
   /usr/src/enchant-1.4.2-X.tar.bz2
-  /usr/src/enchant-devel-1.4.2-X.tar.bz2
+  /usr/src/libenchant-devel-1.4.2-X.tar.bz2
+  /usr/src/libenchant1-1.4.2-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
 (enchant)
-  /usr/bin/cygenchant-1.dll
   /usr/bin/enchant-lsmod.exe
   /usr/bin/enchant.exe
-  /usr/lib/enchant/cygenchant_aspell.dll
-  /usr/lib/enchant/cygenchant_hspell.dll
-  /usr/lib/enchant/cygenchant_ispell.dll
-  /usr/lib/enchant/cygenchant_myspell.dll
-  /usr/lib/enchant/cygenchant_uspell.dll
-  /usr/lib/enchant/cygenchant_voikko.dll
-  /usr/lib/enchant/cygenchant_zemberek.dll
-  /usr/lib/enchant/libenchant_aspell.la
-  /usr/lib/enchant/libenchant_hspell.la
-  /usr/lib/enchant/libenchant_ispell.la
-  /usr/lib/enchant/libenchant_myspell.la
-  /usr/lib/enchant/libenchant_uspell.la
-  /usr/lib/enchant/libenchant_voikko.la
-  /usr/lib/enchant/libenchant_zemberek.la
   /usr/share/doc/enchant-1.4.2/AUTHORS
   /usr/share/doc/enchant-1.4.2/BUGS
   /usr/share/doc/enchant-1.4.2/COPYING.LIB
@@ -81,10 +65,25 @@ Files included in the binary packages:
   /usr/share/doc/enchant-1.4.2/NEWS
   /usr/share/doc/enchant-1.4.2/README
   /usr/share/doc/enchant-1.4.2/TODO
-  /usr/share/enchant/enchant.ordering
   /usr/share/man/man1/enchant.1.gz
 
-(enchant-devel)
+(libenchant1)
+  /usr/bin/cygenchant-1.dll
+  /usr/lib/enchant/cygenchant_aspell.dll
+  /usr/lib/enchant/cygenchant_hspell.dll
+  /usr/lib/enchant/cygenchant_ispell.dll
+  /usr/lib/enchant/cygenchant_myspell.dll
+  /usr/lib/enchant/cygenchant_uspell.dll
+  /usr/lib/enchant/cygenchant_voikko.dll
+  /usr/lib/enchant/libenchant_aspell.la
+  /usr/lib/enchant/libenchant_hspell.la
+  /usr/lib/enchant/libenchant_ispell.la
+  /usr/lib/enchant/libenchant_myspell.la
+  /usr/lib/enchant/libenchant_uspell.la
+  /usr/lib/enchant/libenchant_voikko.la
+  /usr/share/enchant/enchant.ordering
+
+(libenchant-devel)
   /usr/include/enchant/enchant++.h
   /usr/include/enchant/enchant-provider.h
   /usr/include/enchant/enchant.h
@@ -95,6 +94,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.4.2-2 -----
+Removed zemberek support, as it depends on JRE-1.5.
 
 ----- version 1.4.2-1 -----
 Version bump.

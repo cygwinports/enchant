@@ -1,0 +1,7 @@
+category: Text
+requires: cygwin glib2 libenchant1
+sdesc: "Interface to various spell checking libraries (apps)"
+ldesc: "The project aims to provide an efficient extensible abstraction 
+for dealing with different spell checking libraries. Enchant is meant to 
+provide a generic interface into various existing spell checking 
+libraries."

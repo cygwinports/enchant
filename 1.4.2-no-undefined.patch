@@ -1,0 +1,11 @@
+--- origsrc/enchant-1.4.2/src/zemberek/Makefile.am	2008-05-05 15:19:19.000000000 -0500
++++ src/enchant-1.4.2/src/zemberek/Makefile.am	2008-05-07 00:26:21.078125000 -0500
+@@ -11,7 +11,7 @@
+ 
+ libenchant_zemberek_lalibdir=$(libdir)/enchant
+ libenchant_zemberek_la_LIBADD= $(ZEMBEREK_LIBS) $(top_builddir)/src/libenchant.la
+-libenchant_zemberek_la_LDFLAGS = -avoid-version -no-undefined
++libenchant_zemberek_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ libenchant_zemberek_la_SOURCES =\
+ 	zemberek.cpp		\

@@ -1,0 +1,20 @@
+DESCRIPTION="Spell checking library with multiple backends"
+HOMEPAGE="http://www.abisource.com/projects/enchant/"
+SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/${P}.tar.gz"
+PATCH_URI="
+	1.4.2-myspell-cflags.patch
+	1.4.2-no-undefined.patch
+"
+
+PKG_NAMES="${PN} lib${PN}1 lib${PN}-devel"
+enchant_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/man/"
+libenchant1_CONTENTS="usr/bin/cygenchant-1.dll usr/lib/${PN}/ usr/share/${PN}"
+libenchant_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+
+CYGCONF_ARGS="
+	--disable-static
+	--enable-aspell --with-aspell-prefix=/usr
+	--enable-myspell --with-myspell-dir=/usr/share/myspell
+	--with-uspell-dir=/usr/share/uspell
+	--disable-zemberek
+"

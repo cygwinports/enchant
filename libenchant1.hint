@@ -1,7 +1,7 @@
 category: Text
-requires: cygwin glib2-devel
+requires: cygwin glib2 libaspell15 libhspell1 libhunspell12 libuspell1 libvoikko1
 external-source: enchant
-sdesc: "Interface to various spell checking libraries (development)"
+sdesc: "Interface to various spell checking libraries (runtime)"
 ldesc: "The project aims to provide an efficient extensible abstraction 
 for dealing with different spell checking libraries. Enchant is meant to 
 provide a generic interface into various existing spell checking 
