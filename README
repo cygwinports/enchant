@@ -6,11 +6,11 @@ provide a generic interface into various existing spell checking
 libraries.
 
 Runtime requirements:
-  cygwin-1.7.0-44
+  cygwin-1.7.0-49
   libaspell15-0.60.5-1
   libgcc1-4.3.2-2
   libhunspell1.2_0-1.2.8-10
-  libglib2.0_0-2.20.0-1
+  libglib2.0_0-2.20.3-1
   libstdc++6-4.3.2-2
   libuspell1-1.1.1-10
 
@@ -19,13 +19,13 @@ Build requirements:
   autoconf2.5-2.63-10
   automake1.9-1.9.6-10
   binutils-20080624-2
-  cygport-0.9.6-1
+  cygport-0.9.7-1
   gawk-3.1.6-2
   gcc4-core-4.3.2-2
   gcc4-g++-4.3.2-2
-  libtool-2.2.7a-11
+  libtool-2.2.7a-13
   make-3.81-2
-  pkg-config-0.23a-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical homepage:
@@ -90,6 +90,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.4.2-11 -----
+Fixed pkg-config files to use gmodule-no-export-2.0.
 
 ----- version 1.4.2-10 -----
 Initial release for Cygwin 1.7.
