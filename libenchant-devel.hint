@@ -1,5 +1,5 @@
 category: Text
-requires: cygwin libenchant1 libglib2.0_0
+requires: libenchant1 libglib2.0_0
 external-source: enchant
 sdesc: "Interface to various spell checking libraries (development)"
 ldesc: "The project aims to provide an efficient extensible abstraction 
