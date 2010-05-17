@@ -6,27 +6,24 @@ provide a generic interface into various existing spell checking
 libraries.
 
 Runtime requirements:
-  cygwin-1.7.0-62
+  cygwin-1.7.5-1
   libaspell15-0.60.5-1
-  libgcc1-4.3.4-1
-  libhunspell1.2_0-1.2.8-10
-  libglib2.0_0-2.22.2-1
-  libstdc++6-4.3.4-1
-  libuspell1-1.1.1-10
+  libgcc1-4.3.4-3
+  libglib2.0_0-2.22.4-2
+  libstdc++6-4.3.4-3
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-10
-  automake1.9-1.9.6-10
-  binutils-2.19.51-1
-  cygport-0.9.10-1
+  autoconf2.5-2.65-1
+  automake1.11-1.11.1-1
+  binutils-2.20.51-2
+  cygport-0.9.84-1
   gawk-3.1.7-1
-  gcc4-core-4.3.4-1
-  gcc4-g++-4.3.4-1
-  libtool-2.2.7a-14
+  gcc4-core-4.3.4-3
+  gcc4-g++-4.3.4-3
+  libtool-2.2.7a-15
   make-3.81-2
   pkg-config-0.23b-10
-  sed-4.1.5-2
 
 Canonical homepage:
   http://www.abisource.com/enchant/
@@ -37,21 +34,25 @@ Canonical download:
 ----------------------------------------
 
 Build instructions:
-  unpack enchant-1.5.0-X-src.tar.bz2
+  unpack enchant-1.6.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./enchant-1.5.0-X.cygport all
+  cygport ./enchant-1.6.0-X.cygport all
 
 This will create:
-  /usr/src/enchant-1.5.0-X-src.tar.bz2
-  /usr/src/enchant-1.5.0-X.tar.bz2
-  /usr/src/libenchant-devel-1.5.0-X.tar.bz2
-  /usr/src/libenchant1-1.5.0-X.tar.bz2
+  /usr/src/enchant-1.6.0-X-src.tar.bz2
+  /usr/src/enchant-1.6.0-X.tar.bz2
+  /usr/src/libenchant-devel-1.6.0-X.tar.bz2
+  /usr/src/libenchant1-1.6.0-X.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
+
+----- version 1.6.0-1 -----
+Version bump.
+Use internal copy of hunspell; disable uspell support.
 
 ----- version 1.5.0-1 -----
 Version bump.
