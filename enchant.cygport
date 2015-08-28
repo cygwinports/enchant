@@ -1,6 +1,6 @@
 NAME="enchant"
 VERSION=1.6.0
-RELEASE=1
+RELEASE=2
 CATEGORY="Text"
 SUMMARY="Interface to various spell checking libraries"
 DESCRIPTION="The project aims to provide an efficient extensible abstraction
@@ -10,17 +10,21 @@ HOMEPAGE="http://www.abisource.com/projects/enchant/"
 SRC_URI="http://www.abisource.com/downloads/enchant/${VERSION}/enchant-${VERSION}.tar.gz"
 PATCH_URI="
 	1.4.2-no-undefined.patch
+	1.6.0-myspell-dir.patch
 "
 
 PKG_NAMES="enchant libenchant1 libenchant-devel"
 enchant_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/man/"
+libenchant1_CATEGORY="Libs"
 libenchant1_CONTENTS="usr/bin/cygenchant-1.dll usr/lib/enchant/ usr/share/enchant/"
+libenchant_devel_CATEGORY="Libs"
 libenchant_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
 
 CYGCONF_ARGS="
 	--enable-aspell --with-aspell-prefix=/usr
 	--disable-hspell
-	--enable-myspell --without-system-myspell
+	--enable-myspell --with-myspell-dir=/usr/share/myspell
 	--disable-uspell
+	--enable-voikko
 	--disable-zemberek
 "
