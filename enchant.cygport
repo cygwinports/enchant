@@ -1,17 +1,15 @@
 NAME="enchant"
-VERSION=1.6.0
-RELEASE=3
+VERSION=1.6.1
+RELEASE=1
 CATEGORY="Text"
 SUMMARY="Interface to various spell checking libraries"
 DESCRIPTION="The project aims to provide an efficient extensible abstraction
 for dealing with different spell checking libraries. Enchant is meant to
 provide a generic interface into various existing spell checking libraries."
-HOMEPAGE="http://www.abisource.com/projects/enchant/"
-SRC_URI="http://www.abisource.com/downloads/enchant/${VERSION}/enchant-${VERSION}.tar.gz"
+HOMEPAGE="https://abiword.github.io/enchant/"
+SRC_URI="https://github.com/AbiWord/enchant/releases/download/enchant-${VERSION//./-}/enchant-${VERSION}.tar.gz"
 PATCH_URI="
-	http://pkgs.fedoraproject.org/cgit/rpms/enchant.git/plain/hunspell-1.4.0-has-no-limit.patch
-	1.4.2-no-undefined.patch
-	1.6.0-myspell-dir.patch
+	1.6.1-disable-zemberek.patch
 "
 
 PKG_NAMES="enchant libenchant1 libenchant-devel"
